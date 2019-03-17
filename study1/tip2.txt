@@ -1,0 +1,10 @@
+
+"%s%s" % ("https://tieba.baidu.com/p/5113603072?pn=", str(2))
+"正在下载第{}张图片".format(2)
+
+
+1，string变成datetime格式 
+dates = pd.to_datetime(pd.Series([‘20010101’, ‘20010331’]), format = ‘%Y%m%d’) 
+
+2，datetime变回string格式 
+dates.apply(lambda x: x.strftime(‘%Y-%m-%d’))

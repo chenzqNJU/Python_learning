@@ -1,0 +1,25 @@
+D:\program files\Python35\lib\site-packages\keras\backend\tensorflow_backend.py"
+
+##########重新加载
+from imp import reload
+reload(plt)
+
+#############解压
+def unpickle(file):
+    import pickle
+    with open(file, 'rb') as fo:
+        dict = pickle.load(fo, encoding='bytes')
+    return dict
+a=unpickle(file)
+
+
+####################更改工作路径
+import os
+os.getcwd()
+os.chdir(r'E:\tf\stock_predict_with_LSTM-master')
+
+####################添加到csv
+pd.DataFrame({"0": [], "1": []}).to_csv('temn.csv', index=False)
+pd.DataFrame(data_res).to_csv('temn.csv', index=False, header=False, mode="a")
+
+print("正在处理的股票代码:%06d" % data_one_stock_num.name)
